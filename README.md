@@ -5,7 +5,7 @@ statically links in a separate C program (`cmain.c`), which in turn
 defers to a Go plugin via one of `gomain.go`'s exported symbols
 (`DoGreet`).
 
-The `DoGreet` function first constructs a 
+The `DoGreet` function first fetches an `api.Greeter` from a Go plugin
 (`plugin.go`/`plugin.so`), on which it will later invoke the `Greet`
 function. First it constructs an instance of the `api.NumberGetter`
 interface, which itself defers to `cmain.c`'s `int get_num();` function.
