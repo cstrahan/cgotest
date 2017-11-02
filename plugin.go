@@ -17,7 +17,7 @@ func (g greeting) Greet(str string, numGetter api.NumberGetter) {
 	x := api.Greeter(nil)
 	_ = x
 	fmt.Printf("Hello, %s!\n", str)
-	fmt.Printf("You're lucky number today is: %d\n", numGetter.GetNumber())
+	fmt.Printf("Your lucky number today is: %d\n", numGetter.GetNumber())
 }
 
 // exported
