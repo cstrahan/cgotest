@@ -24,7 +24,7 @@ typedef struct { void *data; GoInt len; GoInt cap; } GoSlice;
 
 extern void DoGreet(GoString p0);
 
-int c_main() {
+int c_main(int argc, char** argv) {
   printf("C main running . . .");
   GoString name = {"Jack", 4};
   DoGreet(name);
